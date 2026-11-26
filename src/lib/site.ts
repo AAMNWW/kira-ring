@@ -13,3 +13,6 @@ export const NAV_LINKS = [
   { href: "/compare", label: "Compare" },
   { href: "/checkout", label: "Checkout" },
 ] as const;
+
+/** Every call-to-action button (outside the navbar) sends visitors here. */
+export const KIRA_URL = "https://kiraai.ai";

@@ -205,3 +205,7 @@ html[data-theme="dark"] .pg-checkout .shot,html[data-theme="dark"] .pg-checkout 
   .pg-checkout .modal-wrap{align-items:flex-start;padding:16px}
   .pg-checkout .actions{flex-direction:column-reverse}
 }
+/* Call-to-action buttons are links to kiraai.ai; keep the exact button look */
+.pg-checkout a.btn-checkout,.pg-checkout a.gpay,.pg-checkout a.btn-add,.pg-checkout a.btn{text-decoration:none;line-height:normal;text-align:center}
+.pg-checkout a.btn-checkout{display:block}
+.pg-checkout a.btn-add{display:inline-block}

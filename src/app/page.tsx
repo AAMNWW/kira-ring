@@ -6,7 +6,7 @@ import Reveal from "@/components/Reveal";
 import HeroRings from "@/components/home/HeroRings";
 import BuySection from "@/components/home/BuySection";
 import JsonLd from "@/components/JsonLd";
-import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
+import { KIRA_URL, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import "@/styles/home.css";
 
 export const metadata: Metadata = {
@@ -76,12 +76,12 @@ export default function Home() {
           Kira <b>AI-powered</b> transcriber, voice recorder, translator, and health lab — engineered into <b>4 grams of titanium</b> on your finger. All connected to your <b>second brain</b>.
         </p>
         <div className="hero-actions reveal">
-          <Link className="btn btn-primary" href="#buy">
+          <a className="btn btn-primary" href={KIRA_URL}>
             Pre-order now
-          </Link>
-          <button type="button" className="btn btn-ghost">
+          </a>
+          <a className="btn btn-ghost" href={KIRA_URL}>
             Watch the film
-          </button>
+          </a>
         </div>
         <HeroRings />
       </header>
@@ -269,9 +269,9 @@ export default function Home() {
           </div>
 
           <div className="section-cta reveal">
-            <Link className="btn btn-primary" href="#buy">
+            <a className="btn btn-primary" href={KIRA_URL}>
               Shop now
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -716,9 +716,9 @@ export default function Home() {
           </div>
 
           <div className="section-cta reveal">
-            <Link className="btn btn-primary" href="#buy">
+            <a className="btn btn-primary" href={KIRA_URL}>
               Shop now
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -840,12 +840,12 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-actions reveal">
-          <Link className="btn btn-primary" href="#buy">
+          <a className="btn btn-primary" href={KIRA_URL}>
             Pre-order now
-          </Link>
-          <Link className="btn btn-ghost" href="/compare">
+          </a>
+          <a className="btn btn-ghost" href={KIRA_URL}>
             Compare models
-          </Link>
+          </a>
         </div>
       </section>
 

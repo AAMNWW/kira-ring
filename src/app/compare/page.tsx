@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { Fragment, type ReactNode } from "react";
 import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
-import { SITE_URL } from "@/lib/site";
+import { KIRA_URL, SITE_URL } from "@/lib/site";
 import "@/styles/compare.css";
 
 const TITLE = "Kira AI Ring vs Aura Fitness Ring — Feature Comparison";
@@ -176,7 +175,7 @@ export default function ComparePage() {
             <a className="hide-xs" href="#difference">
               The difference
             </a>
-            <a className="btn" href="#buy">
+            <a className="btn" href={KIRA_URL}>
               Buy
             </a>
           </div>
@@ -255,7 +254,7 @@ export default function ComparePage() {
               <div className="col-head">
                 <div className="nm">Kira AI Ring</div>
                 <div className="pr">Titanium · Multiple finishes</div>
-                <a className="btn" href="#buy">
+                <a className="btn" href={KIRA_URL}>
                   Buy
                 </a>
               </div>
@@ -338,12 +337,12 @@ export default function ComparePage() {
           <h2 className="sec-h rv">Kira AI Ring</h2>
           <p className="sub rv">The first ring that listens, remembers, translates, and acts — with your data staying yours.</p>
           <div className="links-row rv" style={{ gap: 18 }}>
-            <Link className="btn lg" href="/#buy">
+            <a className="btn lg" href={KIRA_URL}>
               Shop now
-            </Link>
-            <Link className="btn lg outline" href="/">
+            </a>
+            <a className="btn lg outline" href={KIRA_URL}>
               Learn more
-            </Link>
+            </a>
           </div>
         </div>
       </section>

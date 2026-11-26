@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import MembershipModal, { EditMembership } from "@/components/checkout/MembershipModal";
+import { KIRA_URL } from "@/lib/site";
 import "@/styles/checkout.css";
 
 export const metadata: Metadata = {
@@ -100,9 +101,9 @@ export default function CheckoutPage() {
                     Keep one at your desk and one at home. <a href="#">Learn More</a>
                   </p>
                 </div>
-                <button type="button" className="btn-add">
+                <a className="btn-add" href={KIRA_URL}>
                   Add
-                </button>
+                </a>
               </div>
 
               <div className="panel addon" style={{ marginTop: 14 }}>
@@ -113,9 +114,9 @@ export default function CheckoutPage() {
                     Make and receive calls right with Kira AI — 500 minutes/month. <a href="#">Learn More</a>
                   </p>
                 </div>
-                <button type="button" className="btn-add">
+                <a className="btn-add" href={KIRA_URL}>
                   Add
-                </button>
+                </a>
               </div>
             </section>
 
@@ -140,12 +141,12 @@ export default function CheckoutPage() {
                 <p>Please note that additional taxes and fees may be applied by your local government or carrier upon delivery.</p>
               </div>
 
-              <button type="button" className="btn-checkout">
+              <a className="btn-checkout" href={KIRA_URL}>
                 Checkout
-              </button>
-              <button type="button" className="gpay">
+              </a>
+              <a className="gpay" href={KIRA_URL}>
                 <b>G</b> Pay&nbsp;|&nbsp;••••
-              </button>
+              </a>
               <div className="paylogos">
                 <div className="paylogo" role="img" aria-label="Mastercard">
                   <svg viewBox="0 0 48 30">

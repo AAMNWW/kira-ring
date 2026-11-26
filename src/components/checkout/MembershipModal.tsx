@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { KIRA_URL } from "@/lib/site";
 import { createContext, useCallback, useContext, useEffect, useRef, useState, type ReactNode } from "react";
 
 const Ctx = createContext<{ open: () => void }>({ open: () => {} });
@@ -95,9 +96,9 @@ export default function MembershipModal({ children }: { children: ReactNode }) {
                 <button type="button" className="btn btn-ghost" onClick={close}>
                   Skip for Now
                 </button>
-                <button type="button" className="btn btn-primary" onClick={close}>
+                <a className="btn btn-primary" href={KIRA_URL}>
                   Checkout
-                </button>
+                </a>
               </div>
             </div>
           </div>

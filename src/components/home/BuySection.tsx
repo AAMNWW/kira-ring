@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { FormEvent, useRef, useState } from "react";
+import { useState } from "react";
+import { KIRA_URL } from "@/lib/site";
 
 type Finish = "black" | "silver" | "gold" | "white";
 
@@ -14,8 +15,6 @@ const FINISHES: Record<Finish, { src: string; name: string; price: number; w: nu
 const ORDER: Finish[] = ["black", "silver", "gold", "white"];
 const SIZES = [6, 7, 8, 9, 10, 11, 12, 13];
 
-type Line = { c: Finish; name: string; price: number; size: number | null; qty: number };
-
 const fmt = (n: number) => "$" + n.toLocaleString("en-US");
 
 export default function BuySection() {
@@ -25,10 +24,6 @@ export default function BuySection() {
   const [size, setSize] = useState<number | null>(null);
   const [kit, setKit] = useState(true);
   const [qty, setQty] = useState(1);
-  const [cart, setCart] = useState<Line[]>([]);
-  const [checkoutOpen, setCheckoutOpen] = useState(false);
-  const [done, setDone] = useState(false);
-  const cartRef = useRef<HTMLDivElement>(null);
 
   const pick = (c: Finish) => {
     setCur(c);
@@ -44,34 +39,6 @@ export default function BuySection() {
     setKit(next);
     if (next) setSize(null);
   };
-
-  const addToCart = () => {
-    const f = FINISHES[cur];
-    setCart((prev) => {
-      const i = prev.findIndex((it) => it.c === cur && it.size === size);
-      if (i >= 0) return prev.map((it, j) => (j === i ? { ...it, qty: Math.min(9, it.qty + qty) } : it));
-      return [...prev, { c: cur, name: f.name, price: f.price, size, qty }];
-    });
-    setDone(false);
-    requestAnimationFrame(() => cartRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" }));
-  };
-
-  const remove = (i: number) => setCart((prev) => prev.filter((_, j) => j !== i));
-
-  const submit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
-    setCheckoutOpen(false);
-    setCart([]);
-    setDone(true);
-  };
-
-  const sub = cart.reduce((s, it) => s + it.price * it.qty, 0);
-  const cartOpen = cart.length > 0 || done;
 
   return (
     <>
@@ -150,74 +117,9 @@ export default function BuySection() {
             </div>
           </div>
 
-          <button type="button" className="btn btn-primary btn-block" onClick={addToCart}>
+          <a className="btn btn-primary btn-block" href={KIRA_URL}>
             Add to Cart
-          </button>
-        </div>
-      </div>
-
-      <div className={`cart-wrap${cartOpen ? " open" : ""}`} ref={cartRef}>
-        <div className="cart-panel">
-          <h4>Your cart</h4>
-          <div>
-            {cart.map((it, i) => (
-              <div className="cart-line" key={`${it.c}-${it.size}`}>
-                <Image src={FINISHES[it.c].src} alt="" width={54} height={54} />
-                <div className="cl-info">
-                  <b>Kira AI Ring — {it.name}</b>
-                  <span>
-                    {it.size ? "Size " + it.size : "Free sizing kit"} · Qty {it.qty} · 1-yr Kira AI included
-                  </span>
-                </div>
-                <span className="cl-price">{fmt(it.price * it.qty)}</span>
-                <button type="button" className="cl-rm" aria-label="Remove" onClick={() => remove(i)}>
-                  ✕
-                </button>
-              </div>
-            ))}
-          </div>
-          <div className="cart-totals">
-            <div className="t-row">
-              <span>Subtotal</span>
-              <span>{fmt(sub)}</span>
-            </div>
-            <div className="t-row">
-              <span>Shipping</span>
-              <span>Free</span>
-            </div>
-            <div className="t-row grand">
-              <span>Total</span>
-              <span>{fmt(sub)}</span>
-            </div>
-          </div>
-          <div style={{ marginTop: 22 }}>
-            <button type="button" className="btn btn-primary btn-block" onClick={() => cart.length && setCheckoutOpen(true)}>
-              Checkout
-            </button>
-          </div>
-
-          <form className={`checkout-form${checkoutOpen ? " open" : ""}`} noValidate onSubmit={submit}>
-            <div className="cf-grid">
-              <input type="text" placeholder="Full name" aria-label="Full name" autoComplete="name" required />
-              <input type="email" placeholder="Email" aria-label="Email" autoComplete="email" required />
-              <input type="text" className="full" placeholder="Address" aria-label="Address" autoComplete="street-address" required />
-              <input type="text" placeholder="City" aria-label="City" autoComplete="address-level2" required />
-              <input type="text" placeholder="Country" aria-label="Country" autoComplete="country-name" required />
-              <input type="text" className="full" placeholder="Card number" aria-label="Card number" inputMode="numeric" autoComplete="off" required />
-              <input type="text" placeholder="MM / YY" aria-label="Expiry date" autoComplete="off" required />
-              <input type="text" placeholder="CVC" aria-label="CVC" inputMode="numeric" autoComplete="off" required />
-            </div>
-            <button className="btn btn-primary btn-block" type="submit">
-              Pay securely
-            </button>
-            <p className="pay-note">Demo checkout — no payment is processed. Payments integration is wired at launch.</p>
-          </form>
-
-          <div className={`order-done${done ? " open" : ""}`}>
-            <div className="od-ico">✓</div>
-            <h4>Order placed</h4>
-            <p>Thank you — your Kira AI Ring is on its way. A confirmation email will follow.</p>
-          </div>
+          </a>
         </div>
       </div>
     </>
