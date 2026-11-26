@@ -826,6 +826,9 @@ html[data-theme="dark"] .pg-home .buy-incl{color:#2e6de0}
 /* ───────── Additions for the Next.js build ───────── */
 /* Original <img>s never shrank in the flex row (intrinsic min-size); keep that with srcset images */
 .pg-home .hero-rings img{flex-shrink:0}
+/* Below desktop width, let the four hero rings shrink so they fit inside
+   the row instead of pressing against the screen edges. */
+@media (max-width:1100px){.pg-home .hero-rings img{flex-shrink:1;min-width:0}}
 /* Links that replace the original <button>s keep the exact button look */
 .pg-home a.btn{display:inline-block;text-decoration:none;line-height:normal}
 /* The original referenced these two animations without defining them,
@@ -835,9 +838,12 @@ html[data-theme="dark"] .pg-home .buy-incl{color:#2e6de0}
 
 /* Small-screen refinements */
 @media (max-width:600px){
-  .pg-home .core-label{margin:6px 0 0;font-size:13px}
-  .pg-home .orbit-tag{font-size:11.5px;padding:6px 11px}
-  .pg-home .ot1{top:0;left:0}.pg-home .ot2{top:12%;right:0}.pg-home .ot3{bottom:14%;left:0}.pg-home .ot4{bottom:0;right:0}
+  /* Brain diagram: tags would collide with the brain on phones, so they
+     flow as a wrapped row underneath it instead of floating around it. */
+  .pg-home .core-stage{display:flex;flex-wrap:wrap;justify-content:center;align-content:center;gap:8px;min-height:0;padding:8px 0}
+  .pg-home .core{width:100%;margin-bottom:14px}
+  .pg-home .core-label{margin:10px 0 0;font-size:13px}
+  .pg-home .orbit-tag{position:static;font-size:11.5px;padding:6px 11px}
   .pg-home .stats-inner{padding:36px 20px;gap:28px 16px}
   .pg-home .card{padding:30px 24px}
   .pg-home .band-overlay{padding:32px 22px}
