@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import { THEME_KEY } from "@/lib/theme";
 
 type Theme = "light" | "dark";
@@ -12,24 +11,11 @@ function apply(t: Theme) {
 }
 
 /**
- * Light / dark toggle. Follows the OS setting until the visitor picks one,
- * then remembers the choice. The icon is swapped purely in CSS from
- * html[data-theme], so server and client markup always match.
+ * Light / dark toggle. The site is light by default; the visitor's choice
+ * is remembered. The icon is swapped purely in CSS from html[data-theme],
+ * so server and client markup always match.
  */
 export default function ThemeToggle() {
-  useEffect(() => {
-    const mq = matchMedia("(prefers-color-scheme: light)");
-    const onChange = (e: MediaQueryListEvent) => {
-      let saved: string | null = null;
-      try {
-        saved = localStorage.getItem(THEME_KEY);
-      } catch {}
-      if (saved !== "light" && saved !== "dark") apply(e.matches ? "light" : "dark");
-    };
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
-  }, []);
-
   const toggle = () => {
     const next: Theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
     apply(next);
