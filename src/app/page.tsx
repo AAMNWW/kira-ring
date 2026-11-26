@@ -353,7 +353,7 @@ export default function Home() {
       {/* LIFESTYLE BAND */}
       <div className="band-section">
         <div className="band-inner reveal">
-          <Image src="/images/lifestyle-hand.jpg" alt="A hand wearing the Kira AI Ring in Midnight Black, resting naturally on a wooden ledge in sunlight" width={1100} height={1119} sizes="(max-width: 1148px) 96vw, 1100px" />
+          <Image src="/images/ring-on-hand.jpg" alt="A hand wearing the Kira AI Ring in Midnight Black, resting naturally on a wooden ledge in sunlight" width={1100} height={1095} sizes="(max-width: 1148px) 96vw, 1100px" />
           <div className="band-overlay">
             <h3>Forget you&apos;re wearing it.</h3>
             <p>Aerospace-grade shell, 4-gram weight, all-week battery. It disappears on your hand — until you need it.</p>

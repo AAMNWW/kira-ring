@@ -658,7 +658,13 @@ html[data-theme="light"] .pg-home .aio-ring{filter:drop-shadow(0 28px 36px rgba(
 .pg-home .swatch{
   width:52px;height:52px;border-radius:50%;cursor:pointer;border:2px solid transparent;
   transition:transform .3s var(--ease),border-color .3s;padding:0;
+  /* Drop iOS Safari's native button styling */
+  -webkit-appearance:none;appearance:none;
 }
+/* Size each finish gradient to the whole circle (incl. the transparent border)
+   so it doesn't repeat into the edge as a seam. Higher specificity than
+   .sw-*, whose background shorthand would otherwise reset it. */
+.pg-home button.swatch{background-origin:border-box}
 .pg-home .swatch:hover{transform:scale(1.12)}
 .pg-home .swatch[aria-pressed="true"]{border-color:var(--white);transform:scale(1.12)}
 .pg-home .sw-black{background:radial-gradient(circle at 32% 30%,#5c5c62,#111 65%)}
