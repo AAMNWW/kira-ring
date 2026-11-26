@@ -708,7 +708,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="hside hside-fit oxwrap" role="img" aria-label="Pulse oximeter display showing SpO2 at 98 percent and pulse rate 60 bpm">
-                  <Image src="/images/oximeter.jpg" alt="" width={877} height={448} sizes="(max-width: 820px) 92vw, 480px" />
+                  <Image src="/images/spo2-monitor.jpg" alt="" width={848} height={448} sizes="(max-width: 820px) 92vw, 480px" />
                   <span className="ox-sweep" aria-hidden="true" />
                 </div>
               </div>
