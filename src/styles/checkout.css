@@ -25,7 +25,7 @@
 .pg-checkout a{color:inherit}
 
 /* ============ CART PAGE ============ */
-.pg-checkout .wrap{max-width:1180px;margin:0 auto;padding:80px 32px 60px}
+.pg-checkout .wrap{max-width:1180px;margin:0 auto;padding:calc(var(--nav-h) + 28px) 32px 60px}
 .pg-checkout .logo-img{height:30px;width:auto;display:block}
 .pg-checkout .cart-btn{position:relative;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
   background:var(--card);display:grid;place-items:center;cursor:pointer}
@@ -185,7 +185,7 @@ html[data-theme="dark"] .pg-checkout .shot,html[data-theme="dark"] .pg-checkout 
 .pg-checkout .back{margin-bottom:10px}
 .pg-checkout .link{background:none;border:none;padding:0;font:inherit;font-size:14px}
 @media (max-width:920px){
-  .pg-checkout .wrap{padding:72px 18px 48px}
+  .pg-checkout .wrap{padding:calc(var(--nav-h) + 20px) 18px 48px}
 }
 @media (max-width:560px){
   .pg-checkout h1.page{font-size:30px}

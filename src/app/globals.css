@@ -2,7 +2,8 @@
    Page-specific styles live in src/styles/*.css and are scoped to
    .pg-home / .pg-compare / .pg-checkout so the three pages never clash. */
 
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:52px}
+:root{--nav-h:60px} /* navbar height — everything that sits below the fixed nav uses this */
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:var(--nav-h)}
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
@@ -49,7 +50,7 @@ html[data-theme="light"],:root:not([data-theme="dark"]){
   transition:background-color .45s var(--nv-ease),border-color .45s var(--nv-ease);
 }
 .nav-inner{
-  max-width:1100px;margin:0 auto;height:52px;
+  max-width:1100px;margin:0 auto;height:var(--nav-h);
   display:flex;align-items:center;justify-content:space-between;
   padding:0 24px;position:relative;
 }
@@ -95,7 +96,7 @@ html[data-theme="light"] .tt-moon{display:block}
 @media (max-width:820px){
   .nav-burger{display:grid}
   .nav-links{
-    position:absolute;top:52px;left:0;right:0;
+    position:absolute;top:var(--nav-h);left:0;right:0;
     flex-direction:column;gap:0;
     padding:6px 24px 18px;
     background:var(--nv-panel);
