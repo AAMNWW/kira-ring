@@ -855,9 +855,9 @@ export default function Home() {
           <nav className="foot-links" aria-label="Footer">
             <Link href="/compare">Compare</Link>
             <Link href="/checkout">Checkout</Link>
-            <a href="#">Privacy Policy</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact Us</a>
+            <a href={KIRA_URL}>Privacy Policy</a>
+            <a href={KIRA_URL}>About Us</a>
+            <a href={KIRA_URL}>Contact Us</a>
           </nav>
         </div>
         <p className="foot-note">Recording features are for personal use — comply with local audio-recording laws and obtain consent from participants.</p>
