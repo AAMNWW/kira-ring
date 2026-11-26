@@ -685,8 +685,8 @@ html[data-theme="light"] .pg-home .finish-stage img{filter:drop-shadow(0 30px 38
 .pg-home .finish-stage.switching img{opacity:0;transform:scale(.97)}
 
 .pg-home .cta-blue{color:var(--blue)!important;font-size:clamp(44px,7vw,92px);letter-spacing:-.05em;line-height:1.04}
-.pg-home .cta-dark{color:#2B36D6}
-html[data-theme="dark"] .pg-home .cta-dark{color:#5C65EC}
+.pg-home .cta-dark{color:#0b3ea8}
+html[data-theme="dark"] .pg-home .cta-dark{color:#1e5fd6}
 .pg-home .marquee{
   margin:64px auto 8px;max-width:1200px;overflow:hidden;
   -webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);
