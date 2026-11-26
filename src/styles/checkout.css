@@ -209,3 +209,4 @@ html[data-theme="dark"] .pg-checkout .shot,html[data-theme="dark"] .pg-checkout 
 .pg-checkout a.btn-checkout,.pg-checkout a.gpay,.pg-checkout a.btn-add,.pg-checkout a.btn{text-decoration:none;line-height:normal;text-align:center}
 .pg-checkout a.btn-checkout{display:block}
 .pg-checkout a.btn-add{display:inline-block}
+.pg-checkout .empty-cart .link{margin-top:0}
