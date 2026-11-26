@@ -79,7 +79,7 @@ html[data-theme="dark"] .site-nav .logo-d{display:block}
   box-shadow:0 6px 16px -8px rgba(0,0,0,.45);
   transition:transform .25s var(--nv-ease),background .25s,box-shadow .25s;
 }
-.nav-cta:hover{background:#0b3ea8;color:#fff;transform:scale(1.04);box-shadow:0 8px 20px -8px rgba(11,62,168,.6)}
+.nav-cta:hover{background:#2B36D6;color:#fff;transform:scale(1.04);box-shadow:0 8px 20px -8px rgba(43,54,214,.6)}
 .theme-toggle,.nav-burger{
   width:38px;height:38px;border-radius:50%;border:1px solid var(--nv-line-2);
   background:var(--nv-chip);color:var(--nv-ink);cursor:pointer;font-size:15px;line-height:1;font-family:inherit;

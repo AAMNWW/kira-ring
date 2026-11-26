@@ -4,10 +4,10 @@
   --ink:#1D1D1F;
   --ink-2:#86868B;
   --line:#E4E4E7;
-  --blue:#0C3EA8;
-  --blue-deep:#092F82;
-  --blue-tint:#EDF1FA;
-  --accent:#0C3EA8;
+  --blue:#2B36D6;
+  --blue-deep:#2029B0;
+  --blue-tint:#EDEEFC;
+  --accent:#2B36D6;
   --btn-line:#CFD2D8;
   --legal-line:#DCDCE0;
   --modal-bg:#F5F5F7;
@@ -88,7 +88,7 @@
 
 .pg-checkout .btn-checkout{width:100%;font:inherit;font-size:16px;font-weight:600;color:#fff;background:var(--blue);
   border:none;border-radius:999px;padding:15px;cursor:pointer;transition:background .18s,box-shadow .18s;margin-bottom:12px}
-.pg-checkout .btn-checkout:hover{background:var(--blue-deep);box-shadow:0 8px 20px rgba(12,62,168,.3)}
+.pg-checkout .btn-checkout:hover{background:var(--blue-deep);box-shadow:0 8px 20px rgba(43,54,214,.3)}
 .pg-checkout .gpay{width:100%;background:var(--gpay-bg);border:1px solid var(--gpay-line);border-radius:999px;padding:13px;color:#fff;font:inherit;
   font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:16px}
 .pg-checkout .paylogos{display:flex;justify-content:space-between;gap:10px}
@@ -141,7 +141,7 @@
 .pg-checkout .btn-ghost{background:var(--card);border:1px solid var(--btn-line);color:var(--ink)}
 .pg-checkout .btn-ghost:hover{border-color:var(--ink)}
 .pg-checkout .btn-primary{flex:1;background:var(--blue);border:1px solid var(--blue);color:#fff;text-align:center}
-.pg-checkout .btn-primary:hover{background:var(--blue-deep);border-color:var(--blue-deep);box-shadow:0 8px 20px rgba(12,62,168,.3)}
+.pg-checkout .btn-primary:hover{background:var(--blue-deep);border-color:var(--blue-deep);box-shadow:0 8px 20px rgba(43,54,214,.3)}
 .pg-checkout .divider{border:0;border-top:1px solid var(--line);margin:32px 0 16px}
 .pg-checkout .fine{font-style:italic;font-size:13px;line-height:1.6;color:var(--ink-2);margin:0}
 
@@ -167,10 +167,10 @@ html[data-theme="dark"] .pg-checkout{
   --ink:#F5F5F7;
   --ink-2:#A1A1A6;
   --line:#38383A;
-  --blue:#0C3EA8;
-  --blue-deep:#1550C8;
-  --blue-tint:rgba(46,109,224,.2);
-  --accent:#4D86F0;
+  --blue:#2B36D6;
+  --blue-deep:#4049E6;
+  --blue-tint:rgba(92,101,236,.2);
+  --accent:#7A81F0;
   --btn-line:#48484A;
   --legal-line:#2C2C2E;
   --modal-bg:#161617;
