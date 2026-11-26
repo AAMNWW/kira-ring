@@ -74,6 +74,9 @@ html[data-theme="dark"] .pg-home .eyebrow{color:#2e6de0}
   font-weight:700;letter-spacing:-.045em;line-height:1.02;
   background:linear-gradient(180deg,var(--white) 30%,var(--h1-b));
   -webkit-background-clip:text;background-clip:text;color:transparent;
+  /* Room for descenders (g, y) so the gradient-clipped text isn't cut off;
+     the negative margin keeps the layout exactly as before. */
+  padding-bottom:.16em;margin-bottom:-.16em;
 }
 .pg-home .hero-sub{
   margin-top:22px;max-width:640px;
