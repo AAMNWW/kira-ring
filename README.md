@@ -15,10 +15,10 @@ All three pages share one navbar (Home · Intelligence · Health · Specs · Com
 ## Highlights
 
 - **Matches the original designs.** Each page's CSS is the original stylesheet, scoped to `.pg-home`, `.pg-compare` and `.pg-checkout` so the pages can't clash. At 1440px, full-page screenshots match the originals to within about 1% of pixels.
-- **Light / dark mode.** Light by default. The toggle switches to dark and remembers the visitor's choice in `localStorage`, and an inline script applies the theme before first paint so the page never flashes the wrong theme. Checkout got a dark theme it didn't have before.
+- **Light / dark mode.** Every visit opens in light mode. The toggle switches to dark for the rest of that visit (`sessionStorage`), and an inline script applies the theme before first paint so the page never flashes the wrong theme. Checkout got a dark theme it didn't have before.
 - **Mobile responsive.** A hamburger menu below 820px, extra small-screen tweaks on every page, and no sideways scrolling at 390px. The originals scrolled sideways on mobile.
 - **SEO.** Each page has its own title, description and canonical URL. Also included: Open Graph and Twitter cards, JSON-LD structured data (Product, Organization, WebSite, Breadcrumb), `sitemap.xml`, `robots.txt`, a web manifest, favicon and app icons, a correct heading order, and `next/image` for responsive AVIF/WebP images.
-- **Accessibility.** Keyboard focus styles and a modal that closes with Esc. With "reduce motion" turned on, animations are skipped and content still shows.
+- **Accessibility.** Keyboard focus styles and a modal that closes with Esc. Animations always play, whatever the OS motion setting.
 
 ## Getting started
 

@@ -11,8 +11,8 @@ function apply(t: Theme) {
 }
 
 /**
- * Light / dark toggle. The site is light by default; the visitor's choice
- * is remembered. The icon is swapped purely in CSS from html[data-theme],
+ * Light / dark toggle. The site always opens in light; the visitor's choice
+ * lasts for the current tab session. The icon is swapped purely in CSS from html[data-theme],
  * so server and client markup always match.
  */
 export default function ThemeToggle() {
@@ -20,7 +20,7 @@ export default function ThemeToggle() {
     const next: Theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
     apply(next);
     try {
-      localStorage.setItem(THEME_KEY, next);
+      sessionStorage.setItem(THEME_KEY, next);
     } catch {}
   };
 

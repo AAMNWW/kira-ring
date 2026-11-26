@@ -2,18 +2,12 @@
 
 import { useEffect } from "react";
 
-const reduced = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
-
 function runCounts(root: Element) {
   root.querySelectorAll<HTMLElement>(".count").forEach((el) => {
     if (el.dataset.done) return;
     el.dataset.done = "1";
     const to = parseFloat(el.dataset.to || "0");
     const dec = parseInt(el.dataset.dec || "0", 10);
-    if (reduced()) {
-      el.textContent = to.toFixed(dec);
-      return;
-    }
     const t0 = performance.now();
     const dur = 1400;
     const tick = (t: number) => {

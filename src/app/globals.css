@@ -10,7 +10,6 @@ body{
   background:#f5f5f7;
 }
 html[data-theme="dark"] body{background:#000}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 /* Shared nav tokens (taken from the home page's nav) */
 html[data-theme="dark"]{
@@ -114,8 +113,5 @@ html[data-theme="light"] .tt-moon{display:block}
   .nav-inner{padding:0 16px}
   .nav-right{gap:8px}
   .nav-cta{padding:7px 14px}
-}
-@media (prefers-reduced-motion:reduce){
-  .site-nav *{transition:none!important}
 }
 

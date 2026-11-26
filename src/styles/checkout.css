@@ -158,7 +158,6 @@
   .pg-checkout .item-main{flex-direction:column}
   .pg-checkout .item-price{text-align:left}
 }
-@media (prefers-reduced-motion:reduce){.pg-checkout *{animation:none!important;transition:none!important}}
 
 
 /* ───────── Additions for the Next.js build ───────── */

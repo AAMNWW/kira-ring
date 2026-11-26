@@ -16,7 +16,7 @@ export default function HeroRings() {
 
   useEffect(() => {
     const el = ref.current;
-    if (!el || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!el) return;
     const onScroll = () => {
       const y = Math.min(scrollY, 700);
       el.style.transform = `translateY(${y * 0.1}px) scale(${1 - y * 0.00015})`;
