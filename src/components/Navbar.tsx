@@ -27,8 +27,7 @@ export default function Navbar() {
     <nav className={`site-nav${open ? " open" : ""}`} aria-label="Main">
       <div className="nav-inner">
         <Link className="logo" href="/" aria-label="Kira ai — home">
-          <Image className="logo-img logo-l" src="/images/kira-logo-light.webp" alt="Kira ai" width={88} height={24} loading="eager" />
-          <Image className="logo-img logo-d" src="/images/kira-logo-dark.webp" alt="" aria-hidden="true" width={88} height={24} loading="eager" />
+          <Image className="logo-img" src="/images/kira-logo-blue.webp" alt="Kira ai" width={88} height={24} loading="eager" />
         </Link>
 
         <ul className="nav-links" id="nav-links">

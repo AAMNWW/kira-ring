@@ -820,13 +820,13 @@ export default function Home() {
 
       {/* CTA */}
       <section className="cta">
-        <p className="kicker blue reveal">Translate</p>
+        <p className="kicker brand reveal">Translate</p>
         <h2 className="cta-blue reveal">
           The world speaks
           <br />
           7,000 languages.
           <br />
-          <span className="cta-dark">Kira AI speaks 146 of them.</span>
+          <span className="cta-dark">Kira AI speaks <span className="nw">146 of them.</span></span>
         </h2>
         <p className="lede reveal">On-device AI translates 146 languages in real time. Whisper it, hear it back.</p>
         <div className="marquee reveal" aria-hidden="true">
