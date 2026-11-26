@@ -71,7 +71,7 @@ html[data-theme="dark"] .site-nav .logo-d{display:block}
   padding:8px 14px;border-radius:100px;transition:color .25s,background-color .25s;
 }
 .nav-links a:hover,.nav-links a:focus-visible{color:var(--nv-ink);background:var(--nv-pill)}
-.nav-links a.active{color:var(--nv-ink);background:var(--nv-pill);font-weight:600}
+.nav-links a.active{color:var(--nv-ink);font-weight:600}
 .nav-cta{
   display:inline-flex;align-items:center;justify-content:center;height:38px;text-decoration:none;
   background:var(--nv-ink);color:var(--nv-solid);border:none;font:inherit;font-size:14px;font-weight:600;
