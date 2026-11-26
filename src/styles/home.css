@@ -151,7 +151,7 @@ html[data-theme="light"] .pg-home .hero-photo{box-shadow:0 40px 90px -28px rgba(
   color:#2B36D6;white-space:nowrap;
 }
 html[data-theme="dark"] .pg-home .stat b{color:#5C65EC}
-.pg-home .stat span{display:block;margin-top:6px;font-size:14px;color:var(--grey)}
+.pg-home .stat > span{display:block;margin-top:6px;font-size:14px;color:var(--grey)}
 
 /* ---------- SECTIONS ---------- */
 .pg-home section{padding:120px 24px}
