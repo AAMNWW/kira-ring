@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <!-- teal backdrop -->
+  <rect width="300" height="300" fill="#0C3EA8"/>
+  <circle cx="268" cy="34" r="46" fill="#2A5BC4" opacity=".6"/>
+  <circle cx="18" cy="272" r="60" fill="#092F82" opacity=".7"/>
+
+  <!-- yellow card -->
+  <rect x="26" y="30" width="212" height="240" rx="26" fill="#F5C518"/>
+
+  <!-- RO 5 pill -->
+  
+
+  <!-- 500 Minutes -->
+  <text x="132" y="126" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="900" fill="#0C3EA8">500</text>
+  <text x="132" y="170" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800" fill="#0C3EA8">Minutes</text>
+
+  <!-- AI Calling pill -->
+  <rect x="42" y="196" width="150" height="42" rx="12" fill="#0C3EA8"/>
+  <text x="117" y="223" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF" letter-spacing="1">AI CALLING</text>
+
+  <!-- rosette badge -->
+  <g transform="translate(241,230)">
+    <circle r="47" fill="#FFFFFF"/>
+    <g fill="#F5C518">
+      <circle r="42"/>
+      <g stroke="#F5C518" stroke-width="8" stroke-linecap="round">
+        <line x1="0" y1="-46" x2="0" y2="-40"/><line x1="0" y1="46" x2="0" y2="40"/>
+        <line x1="-46" y1="0" x2="-40" y2="0"/><line x1="46" y1="0" x2="40" y2="0"/>
+        <line x1="-33" y1="-33" x2="-28" y2="-28"/><line x1="33" y1="33" x2="28" y2="28"/>
+        <line x1="-33" y1="33" x2="-28" y2="28"/><line x1="33" y1="-33" x2="28" y2="-28"/>
+      </g>
+    </g>
+    <circle r="35" fill="none" stroke="#0C3EA8" stroke-width="2" stroke-dasharray="3 4"/>
+    <text y="-6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="900" fill="#D63A2F" transform="rotate(-12)">FREE</text>
+    <text y="12" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="800" fill="#0C3EA8" transform="rotate(-12)">Unlimited</text>
+    <text y="24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="800" fill="#0C3EA8" transform="rotate(-12)">AI Calls</text>
+  </g>
+</svg>
